@@ -1,18 +1,25 @@
-const returnFirstTwoDrivers=(drivers) => {
+// Code your solution in this file!
+const drivers = ['bret', 'prince', 'Amari', 'Mo'];
+function returnFirstTwoDrivers(drivers) {
   return drivers.slice(0, 2);
 }
-const returnLastTwoDrivers=(drivers) => {
-  return drivers.slice(drivers.length - 2);
+function returnLastTwoDrivers(drivers){
+return drivers.slice(-2)
 }
-const selectingDrivers=[returnFirstTwoDrivers, returnLastTwoDrivers];
-const createFareMultiplier=(multiplier) => {
-  return (fare) => {
-        return fare * multiplier;
-  }
-}
-const fareDoubler=createFareMultiplier(2);
-const fareTripler=createFareMultiplier(3);
+const selectingDrivers=[returnFirstTwoDrivers,returnLastTwoDrivers]
 
-const selectDifferentDrivers=(drivers, callback) => {
-  return callback(drivers);
+function createFareMultiplier(a){
+ return function ( fare){
+    return fare*a
+ }
 }
+
+function fareDoubler(fare){
+return fare*2
+}
+function fareTripler(fare){
+return fare*3
+}
+function selectDifferentDrivers(drivers,selectingDrivers){
+ 
+return selectingDrivers(drivers)}
